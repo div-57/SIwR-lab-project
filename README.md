@@ -7,7 +7,7 @@ Ten projekt implementuje algorytm śledzenia pieszych wykorzystujący sieci Baye
 
 ### 2. Koncepcja i zasada działania
 
-##### 2.1. Inicjalizacja Trackera
+#### 2.1. Inicjalizacja Trackera
 
 Klasa **Tracker** jest odpowiedzialna za utrzymanie i aktualizację śledzonych obiektów (pieszych). Każdy track reprezentuje unikalny obiekt zidentyfikowany na klatkach.
 - Atrybuty:
@@ -17,13 +17,13 @@ Klasa **Tracker** jest odpowiedzialna za utrzymanie i aktualizację śledzonych 
   - **last_detections**: Przechowuje ostatni zestaw detekcji.
   - **track_outputs**: Zapisuje wyniki procesu śledzenia dla każdej klatki.
 
-##### 2.2. Inicjalizacja tracków
+#### 2.2. Inicjalizacja tracków
 Tracki są inicjalizowane przy użyciu sieci Bayesa do modelowania przejść stanów pozycji obiektów.
 - Struktura Sieci Bayesa:
   - Zmienne: **prev_x**, **prev_y** (poprzednie pozycje), **x**, **y** (aktualne pozycje).
   - CPD (Tablice Rozkładów Warunkowych): Są zdefiniowane do modelowania przejść stanów z określonymi prawdopodobieństwami.
 
-##### 2.3 Aktualizacja tracków
+#### 2.3 Aktualizacja tracków
 Metoda **update_tracks** aktualizuje istniejące tracki za pomocą nowych detekcji oraz inicjalizuje nowe tracki dla niepasujących detekcji.
 - Kroki:
   - Obliczanie współczynnika **IoU** (Intersection over Union) dla każdej detekcji względem istniejących tracków.
@@ -32,13 +32,13 @@ Metoda **update_tracks** aktualizuje istniejące tracki za pomocą nowych detekc
   - Inicjalizacja nowych tracków dla detekcji, które nie mogły być skojarzone z żadnym istniejącym trackiem.
   - Zwiększenie **consecutive_invisible_count** dla tracków, które nie zostały zaktualizowane, oraz usunięcie tracków, które przekroczyły max_age.
 
-##### 2.4. Obliczanie IoU
+#### 2.4. Obliczanie IoU
 Metoda **calculate_iou** oblicza współczynnik IoU pomiędzy dwoma prostokątami ograniczającymi, który jest używany do określania podobieństwa między śledzonymi obiektami a nowymi detekcjami.
 
-##### 2.5. Wizualizacja tracków
+#### 2.5. Wizualizacja tracków
 Funkcja **visualize_tracks** umożliwia wizualizację detekcji i tracków poprzez rysowanie prostokątów na klatkach.
 
-##### 2.6. Wykonanie śledzenia pieszych
+#### 2.6. Wykonanie śledzenia pieszych
 Funkcja **track_pedestrians** zarządza procesem śledzenia we wszystkich klatkach w zestawie danych.
 - Kroki:
   - Wczytanie prostokątów ograniczających z zestawu danych.
@@ -46,7 +46,7 @@ Funkcja **track_pedestrians** zarządza procesem śledzenia we wszystkich klatka
   - Zapis wyników procesu śledzenia.
   - Obliczanie i wyświetlanie całkowitego oraz średniego czasu przetwarzania.
 
-##### 2.7. Ocena dokładności
+#### 2.7. Ocena dokładności
 Dokładność trackera jest oceniana za pomocą dwóch metryk:
 - Porównanie liczby osób występujących na danej klatce obrazu do obliczonej przez program liczby osób.
 - Porównanie posortowanych wyników tracków z posortowanymi wektorami ground truth dla każdej klatki.
