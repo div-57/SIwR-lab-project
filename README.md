@@ -3,7 +3,7 @@
 
 ### 1. Ogólny zarys
 
-Ten projekt implementuje algorytm śledzenia pieszych wykorzystujący sieci Bayesa oraz algorytm węgierski do asocjacji obiektów. Tracker jest zaprojektowany do identyfikacji i śledzenia wielu pieszych na kolejnych klatkach wideo.
+Projekt implementuje algorytm śledzenia pieszych wykorzystujący sieci Bayesa oraz algorytm węgierski do asocjacji obiektów. Tracker jest zaprojektowany do identyfikacji i śledzenia wielu pieszych na kolejnych klatkach wideo.
 
 ### 2. Koncepcja i zasada działania
 
