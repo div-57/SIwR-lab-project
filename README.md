@@ -63,3 +63,14 @@ Wydajność trackera jest mierzona poprzez:
 - Średni czas przetwarzania na klatkę.
 - Dokładność na podstawie prostokątów ograniczających (**bboxes.txt**).
 - Dokładność na podstawie wektorów ground truth (**bboxes_gt_vector_filtered.txt**).
+
+Poniżej uzyskane wartości dla tego projektu.
+
+![Metryki](https://github.com/div-57/SIwR-lab-project/blob/main/img/metryki_wydajnosci.png)
+
+### 5. Graf modelu
+
+![Graf](https://github.com/div-57/SIwR-lab-project/blob/main/img/graf.png)
+
+
+*Autorstwo: Waszkowiak Michał, Woźniak Dawid*
